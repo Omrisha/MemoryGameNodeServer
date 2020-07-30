@@ -76,4 +76,6 @@ app.get('/:username', (req, res) => {
       });
 });
 
+app.get('/', (req, res) => res.send("Hello Memory Game Server!"));
+
 app.listen(port, () => console.log(`Hello world app listening on port ${port}!`));
