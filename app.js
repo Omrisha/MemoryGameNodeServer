@@ -1,7 +1,7 @@
 const express = require('express')
 const mysql = require('mysql');
 const app = express()
-const port = 4000
+const port = process.env.PORT
 var cors = require("cors");
 
 var localConnStr = {
@@ -78,4 +78,4 @@ app.get('/:username', (req, res) => {
 
 app.get('/', (req, res) => res.send("Hello Memory Game Server!"));
 
-app.listen(port, () => console.log(`Hello world app listening on port ${port}!`));
+app.listen(port, () => console.log(`Memory Game Server listening on port ${port}!`));
